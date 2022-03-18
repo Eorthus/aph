@@ -33,6 +33,7 @@ a {
 .container {
   padding-right: 22px;
   padding-left: 22px;
+  position: relative;
 }
 
 .rotate {
