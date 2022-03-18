@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: $font-color;
+}
+.container {
+    padding-right: 22px;
+    padding-left: 22px;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+input {
+    outline: none;
+}
+button {
+    cursor: pointer;
+}
+.invisible {
+    display: none !important;
+}
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #bac2cd;
+}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #bac2cd;
+}
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #bac2cd;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #bac2cd;
+}

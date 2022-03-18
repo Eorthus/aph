@@ -1,0 +1,259 @@
+body {
+    max-width: 768px;
+    width: 100%;
+    background: #f2f2f2;
+    color: $font-color;
+    font-family: "spartan";
+}
+header {
+    min-height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    .logo-container {
+        display: flex;
+        .logo-img {
+            width: 13px;
+            height: 13px;
+            margin-right: 5px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .logo-h1 {
+            text-transform: uppercase;
+            font-size: $font_header_size;
+            font-family: "spartan_bold";
+            font-weight: 700;
+            margin-top: 2px;
+        }
+    }
+    .menu-container {
+        display: flex;
+        align-items: center;
+        .menu-message {
+            width: 14px;
+            height: 14px;
+            margin-right: 15px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .menu-profile {
+            align-items: center;
+            display: flex;
+            width: 13px;
+            height: 14px;
+            margin-top: 2px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            #menu {
+                display: none;
+            }
+            label {
+                display: block;
+            }
+            .menu {
+                display: none;
+                background-color: #ffffff;
+                .menu-user {
+                    width: 26px;
+                    height: 26px;
+                    margin-right: 13px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .menu-h1 {
+                    text-transform: uppercase;
+                    font-size: $font_header_size;
+                    font-family: "spartan_bold";
+                    font-weight: 700;
+                }
+            }
+            .open[type="checkbox"]:checked ~ .menu {
+                display: flex;
+                max-width: 207px;
+                width: 100%;
+                min-height: 66px;
+                position: absolute;
+                top: 46px;
+                right: 0;
+                justify-content: center;
+                align-items: center;
+                z-index: 999;
+            }
+
+            .menu-cross {
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: 8px;
+                border-radius: 5px;
+                border: none;
+                color: #89919a;
+                text-align: center;
+                font-weight: bold;
+            }
+            .close[type="checkbox"]:checked ~ .menu {
+                display: none;
+            }
+        }
+    }
+}
+.top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: $font_header_size;
+    font-family: "spartan_bold";
+    padding-top: 35px;
+    padding-bottom: 26px;
+    position: relative;
+    .filter-head {
+        font-family: "spartan", sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+        .filter-head-img {
+            width: 9px;
+            height: 6px;
+            object-fit: cover;
+            transition: 0.2s;
+            margin-left: 7px;
+        }
+    }
+}
+
+#filter {
+    display: none;
+}
+label {
+    display: contents;
+    font-family: "spartan_bold";
+}
+.filter {
+    display: none;
+    background-color: #ffffff;
+}
+.open[type="checkbox"]:checked ~ .filter {
+    display: flex;
+    max-width: 125px;
+    width: 100%;
+    min-height: 109px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    z-index: 998;
+    .filter-checkbox {
+        display: flex;
+        justify-content: space-between;
+        font-size: $font_mini;
+        margin-bottom: 15px;
+        width: 100%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .filter-checkbox-label {
+            font-family: "spartan", sans-serif;
+        }
+        .mark {
+            display: none;
+        }
+        .mark-checked {
+            display: inline;
+        }
+        .label-checked {
+            font-weight: bold;
+        }
+    }
+}
+
+.middle {
+    margin-bottom: 10px;
+    position: relative;
+    .middle-input {
+        width: 100%;
+        height: 38px;
+        border: none;
+        padding-left: 16px;
+        box-sizing: border-box;
+        font-size: 11px;
+    }
+    .middle-enter {
+        position: absolute;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        background: #55b8ff;
+        top: 3px;
+        right: 3px;
+        border: none;
+        &:active {
+            background: #4da4e2;
+        }
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+.bottom {
+    .bottom-ul-li {
+        background: white;
+        list-style: none;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        height: 44px;
+        align-items: center;
+        padding: 15.5px 10px;
+        box-sizing: border-box;
+        font-size: 11px;
+        cursor: pointer;
+        .bottom-ul-li-check {
+            border: 2px solid #bfc6d0;
+            width: 13px;
+            height: 13px;
+            img {
+                display: block;
+                margin: auto;
+                margin-top: 3.5px;
+                visibility: hidden;
+            }
+            .img-checked {
+                visibility: visible;
+            }
+        }
+        .bottom-ul-li-span {
+            margin-right: auto;
+            margin-left: 10px;
+            margin-top: 4px;
+        }
+        .span-checked {
+            text-decoration: line-through;
+        }
+        .bottom-ul-li-cross {
+            font-weight: bold;
+            color: #89919a;
+            border: none;
+            background: transparent;
+        }
+    }
+}

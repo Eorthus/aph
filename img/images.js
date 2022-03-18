@@ -1,0 +1,9 @@
+import "./arrow_down.svg";
+import "./logo.svg";
+import "./check.svg";
+import "./enter.svg";
+import "./arrowup.svg";
+import "./message.svg";
+import "./profile.svg";
+import "./round.svg";
+import "./user.svg";

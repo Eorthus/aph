@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avtograph</title>
+    <link rel="stylesheet" href="./css/style.css">
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body>
+    <header class="container">
+        <a class="logo-container" href="index.html">
+            <div class="logo-img">
+                <img src="./img/logo.svg" alt="logo">
+            </div>
+            <div class="logo-h1">
+                <span>Avtograph</span>
+            </div>
+        </a>
+        <div class="menu-container">
+            <div class="menu-message">
+                <img src="./img/message.svg" alt="messages">
+            </div>
+            <div class="menu-profile">
+                <label for="menu">
+                    <img src="./img/profile.svg" alt="profile">
+                </label>
+                <input class="open" type="checkbox" id="menu">
+                <div class="menu">
+                    <div class="menu-user">
+                        <img src="./img/user.svg" alt="user">
+                    </div>
+                    <span class="menu-h1">user</span>
+                    <label for="menu" class="menu-cross">
+                        <p>x</p>
+                    </label>
+                    <input class="close" type="checkbox" id="menu">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="top">
+            <span class="top-h1">Avtograph TODO list</span>
+            <div class="top-filter">
+                <label for="filter" class="filter-label">
+                    <span class="filter-head">Все <img src="./img/arrow_down.svg" alt="arrow"
+                            class="filter-head-img"></span>
+                </label>
+                <input class="open" type="checkbox" id="filter">
+                <div class="filter">
+                    <div class="filter-checkbox selected">
+                        <label for="all" class="filter-checkbox-label label-checked" id="all">Все <img
+                                class="mark mark-checked" src="./img/check.svg" alt="check"></label>
+
+
+
+                    </div>
+                    <div class="filter-checkbox">
+                        <label class="filter-checkbox-label" for="done" id="done">Выполненные <img class="mark"
+                                src="./img/check.svg" alt="check"></label>
+
+
+                    </div>
+                    <div class="filter-checkbox">
+                        <label class="filter-checkbox-label" for="process" id="inwork">В работе <img class="mark"
+                                src="./img/check.svg" alt="check"></label>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <section class="middle">
+            <input class="middle-input" type="text" name="todo-add" id="todo-add" placeholder="Поле ввода">
+            <button class="middle-enter">
+                <img src="./img/enter.svg" alt="enter">
+            </button>
+
+        </section>
+        <section class="bottom">
+            <ul class="bottom-ul">
+
+            </ul>
+        </section>
+    </main>
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

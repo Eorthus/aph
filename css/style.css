@@ -1,0 +1,428 @@
+@font-face {
+  font-family: "spartan";
+  src: url("../fonts/spartan.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "spartan_bold";
+  src: url("../fonts/spartan_bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "noto_sans";
+  src: url("../fonts/noto_sans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #171e29;
+}
+
+.container {
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.invisible {
+  display: none !important;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #bac2cd;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #bac2cd;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #bac2cd;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #bac2cd;
+}
+
+body {
+  max-width: 768px;
+  width: 100%;
+  background: #f2f2f2;
+  color: #171e29;
+  font-family: "spartan";
+}
+
+header {
+  min-height: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+header .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .logo-container .logo-img {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+header .logo-container .logo-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .logo-container .logo-h1 {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: "spartan_bold";
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+header .menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .menu-container .menu-message {
+  width: 14px;
+  height: 14px;
+  margin-right: 15px;
+}
+
+header .menu-container .menu-message img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .menu-container .menu-profile {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 13px;
+  height: 14px;
+  margin-top: 2px;
+}
+
+header .menu-container .menu-profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .menu-container .menu-profile #menu {
+  display: none;
+}
+
+header .menu-container .menu-profile label {
+  display: block;
+}
+
+header .menu-container .menu-profile .menu {
+  display: none;
+  background-color: #ffffff;
+}
+
+header .menu-container .menu-profile .menu .menu-user {
+  width: 26px;
+  height: 26px;
+  margin-right: 13px;
+}
+
+header .menu-container .menu-profile .menu .menu-user img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .menu-container .menu-profile .menu .menu-h1 {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: "spartan_bold";
+  font-weight: 700;
+}
+
+header .menu-container .menu-profile .open[type="checkbox"]:checked ~ .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 207px;
+  width: 100%;
+  min-height: 66px;
+  position: absolute;
+  top: 46px;
+  right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+}
+
+header .menu-container .menu-profile .menu-cross {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  border-radius: 5px;
+  border: none;
+  color: #89919a;
+  text-align: center;
+  font-weight: bold;
+}
+
+header .menu-container .menu-profile .close[type="checkbox"]:checked ~ .menu {
+  display: none;
+}
+
+.top {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 13px;
+  font-family: "spartan_bold";
+  padding-top: 35px;
+  padding-bottom: 26px;
+  position: relative;
+}
+
+.top .filter-head {
+  font-family: "spartan", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.top .filter-head .filter-head-img {
+  width: 9px;
+  height: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-left: 7px;
+}
+
+#filter {
+  display: none;
+}
+
+label {
+  display: contents;
+  font-family: "spartan_bold";
+}
+
+.filter {
+  display: none;
+  background-color: #ffffff;
+}
+
+.open[type="checkbox"]:checked ~ .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 125px;
+  width: 100%;
+  min-height: 109px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 998;
+}
+
+.open[type="checkbox"]:checked ~ .filter .filter-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.open[type="checkbox"]:checked ~ .filter .filter-checkbox:last-child {
+  margin-bottom: 0;
+}
+
+.open[type="checkbox"]:checked ~ .filter .filter-checkbox .filter-checkbox-label {
+  font-family: "spartan", sans-serif;
+}
+
+.open[type="checkbox"]:checked ~ .filter .filter-checkbox .mark {
+  display: none;
+}
+
+.open[type="checkbox"]:checked ~ .filter .filter-checkbox .mark-checked {
+  display: inline;
+}
+
+.open[type="checkbox"]:checked ~ .filter .filter-checkbox .label-checked {
+  font-weight: bold;
+}
+
+.middle {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.middle .middle-input {
+  width: 100%;
+  height: 38px;
+  border: none;
+  padding-left: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 11px;
+}
+
+.middle .middle-enter {
+  position: absolute;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: #55b8ff;
+  top: 3px;
+  right: 3px;
+  border: none;
+}
+
+.middle .middle-enter:active {
+  background: #4da4e2;
+}
+
+.middle .middle-enter img {
+  display: block;
+  margin: auto;
+}
+
+.bottom .bottom-ul-li {
+  background: white;
+  list-style: none;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 44px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15.5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.bottom .bottom-ul-li .bottom-ul-li-check {
+  border: 2px solid #bfc6d0;
+  width: 13px;
+  height: 13px;
+}
+
+.bottom .bottom-ul-li .bottom-ul-li-check img {
+  display: block;
+  margin: auto;
+  margin-top: 3.5px;
+  visibility: hidden;
+}
+
+.bottom .bottom-ul-li .bottom-ul-li-check .img-checked {
+  visibility: visible;
+}
+
+.bottom .bottom-ul-li .bottom-ul-li-span {
+  margin-right: auto;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+.bottom .bottom-ul-li .span-checked {
+  text-decoration: line-through;
+}
+
+.bottom .bottom-ul-li .bottom-ul-li-cross {
+  font-weight: bold;
+  color: #89919a;
+  border: none;
+  background: transparent;
+}
+/*# sourceMappingURL=style.css.map */
